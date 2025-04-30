@@ -6,9 +6,11 @@
   --content-brand: #9282FA;
 
   --background-primary: #151515;
+  --background: #14151D;
   --background-secondary: #23242C;
   --background-brand: #9282FA;
   --background-highlights: #BDB4FA;
+  --background-logo: #2E2C30;
 
   --border-primary: #3E3C41;
   --border-secondary: #86818C;
@@ -27,8 +29,8 @@
   --ff-inter: 'Inter', sans-serif;
 
   /* Text */
-  --title: 800 1.5rem/2rem var(var(--ff-inter-tight));
-  --paragraph-medium: 700 0.875rem/1.5rem var(--ff-inter);
+  --title: 700 1.5rem/2rem var(--ff-inter-tight);
+  --paragraph-medium: 500 0.875rem/1.5rem var(--ff-inter);
   --paragraph-small: 700 0.75rem/1rem var(--ff-inter);
   --label-large: 800 1rem/1.5rem var(--ff-inter);
   --label-medium: 800 0.875rem/1.5rem var(--ff-inter);
@@ -106,6 +108,11 @@ input[data-default] {
     background-position: 0.75rem;
   }
 
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
 }
 
 button {
