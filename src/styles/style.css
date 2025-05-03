@@ -146,6 +146,7 @@ main {
         & a {
           grid-area: D;
           justify-self: flex-end;
+          margin-bottom: 0.75rem
         }
 
       }
@@ -194,6 +195,12 @@ main {
       &>input {
         width: 172px;
       }
+    }
+  }
+
+  main {
+    & a {
+      margin-bottom: 0;
     }
   }
 
