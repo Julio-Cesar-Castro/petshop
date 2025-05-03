@@ -42,7 +42,7 @@
           <div class="content-schudele-info">
             <div>
               <span>09:00</span>
-              <span class="pet-name">Thor <p>/ Fernanda Costa</p></span>
+              <span class="pet-name">Thor <p>/ Fernanda Costa</p> </span>
             </div>
             <span class="thirdSpan">Vacinação</span>
             <a href="">Remover agendamento</a>
@@ -107,7 +107,62 @@
       </div>
     </main>
 
+    <dialog open="false">
+
+      <figure>
+        <img src="src/assets/cancel.svg" alt="cancel button">
+      </figure>
+
+      <div class="title-wrapper">
+        <h2>Agende um atendimento</h2>
+        <span>Preencha os dados do cliente para realizar o agendamento:</span>
+      </div>
+
+      <form>
+        <div class="input-wrapper-name">
+          <label for="name-tutor">Nome do tutor</label>
+          <input data-default data-icon="user" type="text" id="name-tutor" placeholder="Helena Souza">
+        </div>
+
+        <div class="input-wrapper-petname">
+          <label for="name-pet">Nome do pet</label>
+          <input data-default data-icon="pet" type="text" id="name-pet" placeholder="Cheddar">
+        </div>
+
+        <div class="input-wrapper-phone">
+          <label for="phone">Telefone</label>
+          <input data-default data-icon="phone" type="text" id="phone" placeholder="(00) 0 0000-0000">
+        </div>
+
+        <div class="input-wrapper-services">
+          <label for="service">Descrição do serviço</label>
+          <textarea type="text" id="service" placeholder="Banho e tosa"></textarea>
+        </div>
+
+        <div class="input-wrapper-date-time">
+          <div class="input-wrapper-date">
+            <label for="date">Data</label>
+            <input data-default data-icon="calendar" type="date" name="date" id="date">
+          </div>
+
+          <div class="input-wrapper-hour">
+            <label for="hour">Data</label>
+            <input type="time" data-default data-icon="clock" name="hour" id="hour">
+          </div>
+        </div>
+
+      </form>
+
+      <div class="button-wrapper">
+        <button type="submit">Agendar</button>
+      </div>
+    </dialog>
+
+    <div class="schedule-btn-wrapper">
+      <button>Novo agendamento</button>
+    </div>
   </div>
+
   <script type="module" src="./src/main.js"></script>
 </body>
 
