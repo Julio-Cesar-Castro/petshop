@@ -151,6 +151,7 @@ textarea {
   width: auto;
   height: 83px;
   border: 1px var(--border-primary) solid;
+  color: var(--content-primary);
   border-radius: 0.5rem;
   padding: 0.75rem;
   font-size: 1rem;

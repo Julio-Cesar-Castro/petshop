@@ -109,7 +109,7 @@
       </div>
     </main>
 
-    <dialog open="false">
+    <dialog id="modal" open="false">
 
       <figure>
         <img src="src/assets/cancel.svg" alt="cancel button">
@@ -120,7 +120,7 @@
         <span>Preencha os dados do cliente para realizar o agendamento:</span>
       </div>
 
-      <form>
+      <form id="form-submit">
         <div class="input-wrapper-name">
           <label for="name-tutor">Nome do tutor</label>
           <input data-default data-icon="user" type="text" id="name-tutor" placeholder="Helena Souza">
@@ -156,7 +156,7 @@
       </form>
 
       <div class="button-wrapper">
-        <button type="submit">Agendar</button>
+        <button type="submit" form="form-submit">Agendar</button>
       </div>
     </dialog>
 
