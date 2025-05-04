@@ -11,7 +11,6 @@ export async function newSchedule({ id, tutorName, petName, phone, service,date,
     body: JSON.stringify({id,tutorName,petName,phone,service,date,hour})
   })
 
-  console.log(id,tutorName,petName,phone,service,date,hour)
   alert("Agendado com sucesso!")
 
  } catch (error) {

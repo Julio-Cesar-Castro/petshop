@@ -1,3 +1,4 @@
+import { listSchedule } from "../listSchedule.js"
 import { newSchedule } from "../newSchedule.js"
 
 
@@ -26,5 +27,4 @@ form.addEventListener("submit", (event) => {
 
   // Function to create a new Schedule v
   newSchedule(schedule)
-
 })
