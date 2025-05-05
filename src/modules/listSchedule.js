@@ -7,9 +7,7 @@ export async function listSchedule(){
 
   data.map(item => {
     createScheduleOnDOM(item)
-    console.log(item)
   })
-
 }
 
 listSchedule()

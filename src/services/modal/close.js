@@ -1,5 +1,6 @@
 const cancelButton = document.querySelector("dialog figure img")
 const dialog = document.querySelector("dialog")
+const modal = document.getElementById("modal")
 
 export function closeModal(){
   // set Attribute as False to close modal when you click on a close button

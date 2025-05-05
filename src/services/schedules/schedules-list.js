@@ -3,14 +3,12 @@ const morning = document.querySelector(".morning")
 const afternoon = document.querySelector(".afternoon")
 const night = document.querySelector(".night")
 
-export function createScheduleOnDOM({ id, hour, petName, tutorName, service }){
+export async function createScheduleOnDOM({ id, hour, petName, tutorName, service }){
   try {
-
     const contentScheduleInfo = document.createElement("div")
     contentScheduleInfo.classList.add("content-schudele-info")
     contentScheduleInfo.setAttribute("data-id", id)
 
-    
     const div = document.createElement("div")
   
     const hourElement = document.createElement("span")

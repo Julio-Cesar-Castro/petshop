@@ -1,4 +1,6 @@
 import { apiConfig } from '../services/api-config.js'
+import { listSchedule } from './listSchedule.js';
+const modal = document.getElementById("modal")
 
 export async function newSchedule({ id, tutorName, petName, phone, service,date, hour }){
 
@@ -12,6 +14,12 @@ export async function newSchedule({ id, tutorName, petName, phone, service,date,
   })
 
   alert("Agendado com sucesso!")
+
+  // close modal.
+  modal.setAttribute("open", "")
+
+  // Atualizar lista
+  listSchedule()
 
  } catch (error) {
     console.log(error)

@@ -1,7 +1,7 @@
+import { listSchedule } from "../listSchedule"
 
-export function load(){
   document.addEventListener("DOMContentLoaded", () => {
+
     // Insira os valores para atualizar
-    listSchedule()
+    // listSchedule()
   })
-}

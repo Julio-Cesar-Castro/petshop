@@ -1,4 +1,3 @@
-import { listSchedule } from "../listSchedule.js"
 import { newSchedule } from "../newSchedule.js"
 
 
@@ -12,7 +11,7 @@ const inputDate = document.getElementById("date")
 const inputHour = document.getElementById("hour")
 
 
-form.addEventListener("submit", (event) => {
+form.addEventListener("submit", async (event) => {
   event.preventDefault()
 
   const schedule = {
@@ -27,4 +26,7 @@ form.addEventListener("submit", (event) => {
 
   // Function to create a new Schedule v
   newSchedule(schedule)
+
+  // Fecha o input
+
 })
