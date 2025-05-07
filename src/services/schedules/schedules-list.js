@@ -1,3 +1,6 @@
+import { deleteSchedule } from "../../modules/deleteSchedule.js"
+
+
 // DOM
 const morning = document.querySelector(".morning")
 const afternoon = document.querySelector(".afternoon")
@@ -26,6 +29,7 @@ export async function createScheduleOnDOM({ id, hour, petName, tutorName, servic
   
     const buttonRemove = document.createElement("a")
     buttonRemove.innerText = "Remover agendamento"
+    buttonRemove.setAttribute("id", "btn-remove")
 
     const card = document.createElement("div")
     card.classList.add("content-schedule")
@@ -38,6 +42,11 @@ export async function createScheduleOnDOM({ id, hour, petName, tutorName, servic
     contentScheduleInfo.appendChild(div)
     contentScheduleInfo.appendChild(descriptionElement)
     contentScheduleInfo.appendChild(buttonRemove)
+    buttonRemove.addEventListener("click", (e) => {
+      console.log(`ID do evento ${id}`)
+      deleteSchedule(id)
+      e.target.parentNode.remove()
+    })
 
     card.append(contentScheduleInfo)
 

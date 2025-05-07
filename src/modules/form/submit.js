@@ -1,3 +1,4 @@
+import { deleteSchedule } from "../deleteSchedule.js"
 import { newSchedule } from "../newSchedule.js"
 
 
@@ -9,7 +10,6 @@ const inputPhone = document.getElementById("phone")
 const serviceDescription = document.getElementById("service")
 const inputDate = document.getElementById("date")
 const inputHour = document.getElementById("hour")
-
 
 form.addEventListener("submit", async (event) => {
   event.preventDefault()
@@ -27,6 +27,6 @@ form.addEventListener("submit", async (event) => {
   // Function to create a new Schedule v
   newSchedule(schedule)
 
+  modal.setAttribute("open", "")
   // Fecha o input
-
 })

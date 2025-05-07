@@ -5,9 +5,13 @@ export async function listSchedule(){
   const response = await fetch(`${apiConfig.baseURL}/schedules`)
   const data = await response.json()
 
-  data.map(item => {
+  // data.map(item => {
+  //   createScheduleOnDOM(item)
+  // })
+
+  data.forEach(item => {
+    console.log(item)
     createScheduleOnDOM(item)
   })
-}
 
-listSchedule()
+} 
