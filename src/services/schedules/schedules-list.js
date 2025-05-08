@@ -1,6 +1,5 @@
 import { deleteSchedule } from "../../modules/deleteSchedule.js"
 
-
 // DOM
 const morning = document.querySelector(".morning")
 const afternoon = document.querySelector(".afternoon")
@@ -15,7 +14,7 @@ export async function createScheduleOnDOM({ id, hour, petName, tutorName, servic
     const div = document.createElement("div")
 
     const hourElement = document.createElement("span")
-    hourElement.innerText = hour
+    hourElement.innerText = `${hour}:00`
 
     const petnameElement = document.createElement("span")
     petnameElement.classList.add("pet-name")
@@ -34,7 +33,6 @@ export async function createScheduleOnDOM({ id, hour, petName, tutorName, servic
     const card = document.createElement("div")
     card.classList.add("content-schedule")
 
-
     petnameElement.appendChild(nameElement)
     div.appendChild(hourElement)
     div.appendChild(petnameElement)
@@ -50,15 +48,15 @@ export async function createScheduleOnDOM({ id, hour, petName, tutorName, servic
 
     card.append(contentScheduleInfo)
 
+    console.log(typeof(hour))
 
-    // if (hour <= "12:00") {
-    //   morning.appendChild(card)
-    // } else if (hour >= "13:00" && hour <= "18:00") {
-    //   afternoon.innerHTML = " "
-    // } else {
-    //   night.appendChild(card)
-    // }
-    morning.appendChild(card)
+    if (hour <= "12") {
+      morning.appendChild(card)
+    } else if (hour >= "13" && hour <= "18") {
+      afternoon.appendChild(card)
+    } else {
+      night.appendChild(card)
+    }
 
   } catch (error) {
     console.log(error)

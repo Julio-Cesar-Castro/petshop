@@ -64,6 +64,46 @@ label {
   color: var(--content-primary);
 }
 
+select {
+  position: relative;
+  padding: 0.75rem 0.75rem 0.75rem 2.5rem;
+  border: 1px var(--border-primary) solid;
+  width: auto;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: border 200ms ease-in-out, outline 200ms ease-in-out;
+  color: var(--content-primary);
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  background: transparent;
+  outline: none;
+
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+
+  & option {
+    background: var(--background-secondary);
+  }
+
+  &:hover {
+    border: solid 1px var(--border-secondary);
+  }
+
+  &:focus {
+    border: 1px var(--border-brand) solid;
+  }
+
+  &[data-icon="clock"] {
+    background: url('../assets/clock.svg');
+    background-repeat: no-repeat;
+    background-position: 0.75rem;
+  }
+}
+
 input[data-default] {
   position: relative;
   padding: 0.75rem 0.75rem 0.75rem 2.5rem;
@@ -109,11 +149,6 @@ input[data-default] {
     background-position: 0.75rem;
   }
 
-  &[data-icon="clock"] {
-    background: url('../assets/clock.svg');
-    background-repeat: no-repeat;
-    background-position: 0.75rem;
-  }
 
 }
 
@@ -276,7 +311,7 @@ dialog[open="false"] {
 
 @media (width >=45.5rem) {
   dialog {
-    width: 30%;
+    /* width: 30%; */
     padding: 40px 40px;
     top: 50%;
     left: 50%;

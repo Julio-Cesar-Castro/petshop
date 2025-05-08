@@ -2,7 +2,6 @@ const newScheduleButton = document.querySelector(".schedule-btn-wrapper button")
 const modal = document.getElementById("modal")
 const dialog = document.querySelector("dialog")
 
-
 export function openModal(){
   newScheduleButton.addEventListener("click", () => {
     // Check if the modal is close
