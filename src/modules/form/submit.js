@@ -1,6 +1,8 @@
 import { deleteSchedule } from "../deleteSchedule.js"
 import { newSchedule } from "../newSchedule.js"
 
+import { listSchedule } from "../listSchedule"
+
 
 //DOM
 const form = document.querySelector("form")
@@ -27,6 +29,8 @@ form.addEventListener("submit", async (event) => {
   // Function to create a new Schedule v
   newSchedule(schedule)
 
-  modal.setAttribute("open", "")
+  modal.setAttribute("open", "false")
+
+  listSchedule()
   // Fecha o input
 })
