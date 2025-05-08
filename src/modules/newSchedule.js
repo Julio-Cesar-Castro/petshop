@@ -1,8 +1,6 @@
 import { apiConfig } from '../services/api-config.js'
-const modal = document.getElementById("modal")
 
-export async function newSchedule({ id, tutorName, petName, phone, service,date, hour }){
-
+export async function newSchedule({ id, tutorName, petName, phone, service, date, hour }){
  try {
   await fetch(`${apiConfig.baseURL}/schedules`, {
     method: "POST",
