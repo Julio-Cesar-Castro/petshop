@@ -17,7 +17,7 @@ form.addEventListener("submit", async (event) => {
   event.preventDefault()
 
   const schedule = {
-    id: new Date().getTime(),
+    id: new Date().getTime().toString(),
     tutorName: inputTutor.value,
     petName: inputPetName.value,
     phone: inputPhone.value,
@@ -26,10 +26,11 @@ form.addEventListener("submit", async (event) => {
     hour: inputHour.value
   }
 
-  // Function to create a new Schedule v
-  newSchedule(schedule)
-
   modal.setAttribute("open", "false")
+  // Function to create a new Schedule v
+  const result = await newSchedule(schedule)
+
+  alert(result)
 
   listSchedule()
   // Fecha o input

@@ -12,10 +12,10 @@ export async function newSchedule({ id, tutorName, petName, phone, service,date,
     body: JSON.stringify({id,tutorName,petName,phone,service,date,hour})
   })
 
-  alert("Agendado com sucesso!")
+  return "Agendado com sucesso!"
 
  } catch (error) {
     console.log(error)
-    alert("Não foi possível criar um agendamento, tente novamente mais tarde.")
+    return "Não foi possível criar um agendamento, tente novamente mais tarde."
  }
 }
